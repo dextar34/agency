@@ -5,3 +5,7 @@
 body{
     background: #303030;
 }
+
+.slick-slide > div{
+    margin: 0 10px;
+}

@@ -1,8 +1,18 @@
 import React from "react";
 import cn from "../lib/cn";
 import Container from "../components/layer/Container";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+  };
   return (
     <div className={cn("home my-[50px]")}>
       <Container>
@@ -41,7 +51,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className={cn("subHeading")}>
+          <div className={cn("subHeading",
+            'md:mb-10'
+          )}>
             <p className={cn("my-4 text-2xl text-center md:mt-40")}>
               Indonesia-Based Digital Agency
             </p>
@@ -54,10 +66,19 @@ const Home = () => {
           </div>
         </div>
       </Container>
-      <div className={cn("displaySection bg-slate-50 text-black")}>
+      <div className={cn("displaySection  bg-gray-100 text-black")}>
         <Container>
-          <div className={cn('section2 my-14 mx-2 ')}>
-          <div className={cn('picBox ')}></div>
+          <div className={cn('section2 relative   my-3  py-5',
+            ' ')}>
+          <div className={cn('slider1  p-5 mb-5 rounded-xl')}>
+            <h1 className={cn('text-center pb-4 font-bold text-3xl')}>Our services</h1>
+            <Slider {...settings}>
+              <div className="bg-red-400  rounded-xl w-72 h-72  ">1</div>
+              <div className="bg-green-400  rounded-xl w-72 h-72  ">1</div>
+              <div className="bg-red-400  rounded-xl w-72 h-72  ">1</div>
+              <div className="bg-green-400  rounded-xl w-72 h-72  ">1</div>
+            </Slider>
+          </div>
           <div className={cn('heroPic')}>
             <div className={cn('txt md:flex md:items-center md:justify-between ')}>
             <p className={cn('font-bold text-lg py-4 text-center',
@@ -67,7 +88,7 @@ const Home = () => {
             Small studios build awesome design.
             </p>
             <p className={cn('py-4 text-sm',
-              'md:w-96'
+              'md:w-96 md:text-xl md:font-semibold'
             )}>
               Despite being a small team, we believe that our size gives us an advantage, allowing us to be nimble, adaptable, and able to work closely with our clients to deliver truly awesome designs.
             </p>

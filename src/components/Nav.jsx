@@ -5,7 +5,7 @@ import Pic from './layer/Pic';
 import List from './layer/List';
 import cn from '../lib/cn';
 
-const items = ['Home', 'Services', 'Portfolio', 'Pricing', 'About'];
+const items = ['Home', 'Services', 'About'];
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -60,7 +60,7 @@ const Nav = () => {
             <div
               className={cn(
                 'menu  hidden ',
-                'md:gap-x-14 md:flex md:flex-row'
+                'md:gap-x-14 md:flex md:flex-row md:w-full md:justify-center'
               )}
             >
               {/* Desktop Menu */}
