@@ -9,3 +9,17 @@ body{
 .slick-slide > div{
     margin: 0 10px;
 }
+
+.slick-slider .slick-next{
+    right: -10px;
+}
+.slick-slider .slick-prev{
+    left: -10px;
+}
+
+.slick-track .slick-slide{
+    width: 250px;
+}
+html {
+    scroll-behavior: smooth;
+  }

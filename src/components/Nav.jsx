@@ -4,6 +4,7 @@ import Container from './layer/Container';
 import Pic from './layer/Pic';
 import List from './layer/List';
 import cn from '../lib/cn';
+import logo from "/public/logo.png"
 
 const items = ['Home', 'Services', 'About'];
 
@@ -24,8 +25,7 @@ const Nav = () => {
           )}
         >
           <div className="logo flex items-center gap-2">
-            <Pic />
-            <h1 className={cn('text-white font-bold text-2xl')}>Agency</h1>
+            <Pic className={'w-24'}  src={logo}/>
           </div>
           <div
             className={cn(
